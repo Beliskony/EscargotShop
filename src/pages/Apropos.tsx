@@ -2,7 +2,8 @@
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import { Link } from 'react-router-dom'
-import BoxPropos from '../components/apropos/boxPropos'
+import BoxPropos from '../components/apropos/BoxPropos'
+
 
 function Apropos() {
   return (
