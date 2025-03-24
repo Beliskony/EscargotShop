@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom"
 
 const Footer = () => {
   return (
@@ -14,7 +14,7 @@ const Footer = () => {
 
             <div className="flex flex-col justify-center items-start gap-y-2">
               {/*icon Localisation*/}
-              <a href="#"><div className="flex flex-row justify-center items-center gap-x-2">
+              <a target="_blank" rel="noopener noreferrer"><div className="flex flex-row justify-center items-center gap-x-2">
 
                    <div className="h-12 w-12 bg-gray-200 rounded-xl flex justify-center items-center">
                       <img src="/icons/location.png" className="h-7 w-7"/>
@@ -27,7 +27,7 @@ const Footer = () => {
                 </div></a>
 
                  {/*icon appel*/}
-              <a href="#"><div className="flex flex-row justify-center items-center gap-x-2">
+              <a href="#" target="_blank" rel="noopener noreferrer"><div className="flex flex-row justify-center items-center gap-x-2">
 
                    <div className="h-12 w-12 bg-gray-200 rounded-xl flex justify-center items-center">
                       <img src="/icons/call.png" className="h-7 w-7"/>
@@ -40,7 +40,7 @@ const Footer = () => {
                 </div></a>
 
                  {/*icon mail*/}
-              <a href="#"><div className="flex flex-row justify-center items-center gap-x-2">
+              <a href="#" target="_blank" rel="noopener noreferrer"><div className="flex flex-row justify-center items-center gap-x-2">
 
                    <div className="h-12 w-12 bg-gray-200 rounded-xl flex justify-center items-center">
                       <img src="/icons/mail.png" className="h-7 w-7"/>
@@ -63,23 +63,23 @@ const Footer = () => {
             <div className="flex flex-col gap-y-2 max-sm:flex-row max-sm:gap-x-3 max-sm:items-center">
                 <h4>Follow Us</h4>
                 <div className="flex flex-row gap-x-1">
-                    <a href="#">
+                    <a href="#" target="_blank" rel="noopener noreferrer">
                       <img src="/icons/x.png" className="h-5 w-5"/>
                     </a>
 
-                    <a href="#">
+                    <a href="#" target="_blank" rel="noopener noreferrer">
                       <img src="/icons/fb.png" className="h-5 w-5"/>
                     </a>
 
-                    <a href="#">
+                    <a href="#" target="_blank" rel="noopener noreferrer">
                       <img src="/icons/insta.png" className="h-5 w-5"/>
                     </a>
 
-                    <a href="#">
+                    <a href="#" target="_blank" rel="noopener noreferrer">
                       <img src="/icons/linkedin.png" className="h-5 w-5"/>
                     </a>
 
-                    <a href="#">
+                    <a href="#" target="_blank" rel="noopener noreferrer">
                       <img src="/icons/tiktok.png" className="h-5 w-5"/>
                     </a>
                 </div>
@@ -95,21 +95,21 @@ const Footer = () => {
               <h2 className="text-2xl font-bold">Navigation</h2>
             <div className="flex flex-col gap-y-2 justify-start items-center">
 
-              <a href="#">
+              <Link to="/Apropos">
                 <h5 className="font-light text-xs hover:underline hover:font-bold hover:transition-all hover:duration-100">Apropos</h5>
-              </a>
+              </Link>
 
-              <a href="#">
+              <Link to="/Projets">
                 <h5 className="font-light text-xs hover:underline hover:font-bold hover:transition-all hover:duration-100">Projets</h5>
-              </a>
+              </Link>
 
-              <a href="#">
+              <Link to="/Services">
                 <h5 className="font-light text-xs hover:underline hover:font-bold hover:transition-all hover:duration-100">Services</h5>
-              </a>
+              </Link>
 
-              <a href="#">
+              <Link to="/Contacts">
                 <h5 className="font-light text-xs hover:underline hover:font-bold hover:transition-all hover:duration-100">Contacts</h5>
-              </a>
+              </Link>
               </div>
             </div>
 
@@ -117,13 +117,13 @@ const Footer = () => {
             <div className="flex flex-col justify-around items-center gap-y-2 w-1/3">
               <h2 className="text-2xl font-bold">Produits</h2>
 
-              <a href="#">
+              <Link to="/">
                 <h5 className="font-light text-xs hover:underline hover:font-bold hover:transition-all hover:duration-100">Escargots</h5>
-              </a>
+              </Link>
 
-              <a href="#">
+              <Link to="/">
                 <h5 className="font-light text-xs hover:underline hover:font-bold hover:transition-all hover:duration-100">Vollailes</h5>
-              </a>
+              </Link>
 
             </div>
 
@@ -131,17 +131,17 @@ const Footer = () => {
             <div className="flex flex-col justify-around items-center gap-y-2 w-1/3">
               <h2 className="text-2xl font-bold">Support</h2>
 
-              <a href="#">
+              <Link to="/">
                 <h5 className="font-light text-xs hover:underline hover:font-bold hover:transition-all hover:duration-100">Support Client</h5>
-              </a>
+              </Link>
 
-              <a href="#">
+              <Link to="/">
                 <h5 className="font-light text-xs hover:underline hover:font-bold hover:transition-all hover:duration-100">Terms Et Servces</h5>
-              </a>
+              </Link>
 
-              <a href="#">
+              <Link to="/">
                 <h5 className="font-light text-xs hover:underline hover:font-bold hover:transition-all hover:duration-100">Refound</h5>
-              </a>
+              </Link>
 
             </div>
 

@@ -1,5 +1,6 @@
 import { useState } from "react"
 import {motion} from "framer-motion"
+import { Link } from "react-router-dom"
 
 
 const NavBar = () => {
@@ -10,20 +11,20 @@ const NavBar = () => {
             <div className="flex item-center text-3xl text-gray-500 font bold w-1/5 justify-center">logo</div>
 
             <div className="max-sm:hidden flex flex-row w-4/5 items-center justify-end">
-                <a href="#" className="block py-2 px-4 text-gray-500 text-sm hover:text-2xl hover:text-white hover:font-bold">
-                    Acceuil</a>
+                <Link to="/" className="block py-2 px-4 text-gray-500 text-sm hover:text-2xl hover:text-white hover:font-bold">
+                    Acceuil</Link>
 
-                <a href="#" className="block py-2 px-4 text-gray-500 hover:text-2xl hover:text-white hover:font-bold">
-                    Servcice</a>
+                <Link to="/Services" className="block py-2 px-4 text-gray-500 hover:text-2xl hover:text-white hover:font-bold">
+                    Servcice</Link>
 
-                <a href="#" className="block py-2 px-4 text-gray-500 hover:text-2xl hover:text-white hover:font-bold">
-                    A propos</a>
+                <Link to="/Apropos" className="block py-2 px-4 text-gray-500 hover:text-2xl hover:text-white hover:font-bold">
+                    A propos</Link>
 
-                <a href="#" className="block py-2 px-4 text-gray-500 hover:text-2xl hover:text-white hover:font-bold">
-                   Contact</a>
+                <Link to="/Contacts" className="block py-2 px-4 text-gray-500 hover:text-2xl hover:text-white hover:font-bold">
+                   Contacts</Link>
                     
-                <a href="#" className="block py-2 px-4 text-gray-500 hover:text-2xl hover:text-white hover:font-bold">
-                    Projets</a>
+                <Link to="/Projets" className="block py-2 px-4 text-gray-500 hover:text-2xl hover:text-white hover:font-bold">
+                    Projets</Link>
 
             </div>
             
@@ -35,20 +36,20 @@ const NavBar = () => {
             {isOpen && (
                 <motion.div initial={{opacity: 0, y: -10}} animate={{opacity: 1, y: 0}} exit={{opacity: 0, y: -10}} className="md:hidden bg-white shadow-md fixed top-0 left-0
                 w-screen h-screen flex flex-col pt-28 z-40">
-                    <a href="#" className="block py-2 px-4 text-gray-500 hover:text-2xl hover:text-white hover:font-bold">
-                        Acceuil</a>
+                    <Link to="/" className="block py-2 px-4 text-gray-500 hover:text-2xl hover:text-white hover:font-bold">
+                        Acceuil</Link>
 
-                    <a href="#" className="block py-2 px-4 text-gray-500 hover:text-2xl hover:text-white hover:font-bold">
-                        Servcice</a>
+                    <Link to="/Services" className="block py-2 px-4 text-gray-500 hover:text-2xl hover:text-white hover:font-bold">
+                        Servcice</Link>
 
-                    <a href="#" className="block py-2 px-4 text-gray-500 hover:text-2xl hover:text-white hover:font-bold">
-                        A propos</a>
+                    <Link to="/Apropos" className="block py-2 px-4 text-gray-500 hover:text-2xl hover:text-white hover:font-bold">
+                        A propos</Link>
 
-                    <a href="#" className="block py-2 px-4 text-gray-500 hover:text-2xl hover:text-white hover:font-bold">
-                        Contact</a>
+                    <Link to="/Contacts" className="block py-2 px-4 text-gray-500 hover:text-2xl hover:text-white hover:font-bold">
+                        Contacts</Link>
                     
-                    <a href="#" className="block py-2 px-4 text-gray-500 hover:text-2xl hover:text-white hover:font-bold">
-                        Projets</a>
+                    <Link to="/Projets" className="block py-2 px-4 text-gray-500 hover:text-2xl hover:text-white hover:font-bold">
+                        Projets</Link>
                 </motion.div>
             )} </button>
         </nav>
