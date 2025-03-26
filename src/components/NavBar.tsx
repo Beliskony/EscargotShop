@@ -31,7 +31,7 @@ const NavBar = () => {
             </div>
             
             {/*Menu mobile*/}
-            <button className="flex flex-col lg:hidden md:hidden text-[#E2E9C0] z-50" onClick={() => SetIsOpen(!isOpen)}> 
+            <button className="flex flex-col items-center justify-center lg:hidden md:hidden text-[#E2E9C0] z-50" onClick={() => SetIsOpen(!isOpen)}> 
                 {isOpen ? <img src="/icons/close.png" className=" absolute right-2 w-20 h-20 z-50"/> : <img src="/icons/menuWhite.png" className="w-8 h-8"/>}
             
 
