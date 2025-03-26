@@ -3,25 +3,26 @@ import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import { Link } from 'react-router-dom'
 import BoxPropos from '../components/apropos/BoxPropos'
+import EmblaCarousel from '../components/apropos/EmblaCarousel'
+import MiniQuestion from '@/components/apropos/MiniQuestion'
+import EmblaCarouselTemoi from '@/components/apropos/EmblaCarouselTemoi'
 
 
 function Apropos() {
+
+
   return (
-    <section className="flex flex-col w-full h-full">
+    <section className="flex flex-col w-full h-full bg-[#7AA95C]">
         {/*le header*/}
         <div style={{backgroundImage: 'url(/images/bgApropos.webp)', backgroundSize:"cover"}} className="h-[300px] flex flex-col">
             <NavBar/>
-
-            <div className="flex h-full w-full justify-center items-center">
-                <h1 className="text-5xl text-white font-bold underline">A propos</h1>
-            </div>
         </div>
 
         {/*Section2*/}
-        <div className='flex flex-row w-full py-10 px-20 justify-center items-center'>
-            <div className='flex flex-col w-1/2 gap-y-5 justify-center items-left'>
+        <div className='flex flex-row w-full py-10 px-20 justify-center items-center max-sm:flex-col max-sm:px-5'>
+            <div className='flex flex-col w-1/2 gap-y-5 justify-center items-left max-sm:w-full max-sm:items-center max-sm:my-5'>
                 <h1 className='text-4xl font-bold '>Pourquoi nous</h1>
-                <p className='text-xs text-left text-wrap w-[80%]'>Qui fuga dolor sed enim sunt aut neque sunt sit impedit nihil sed tempora doloribus. Sit galisum distinctio 
+                <p className='text-xs text-left text-wrap w-[80%] max-sm:w-full'>Qui fuga dolor sed enim sunt aut neque sunt sit impedit nihil sed tempora doloribus. Sit galisum distinctio 
                 non explicabo odit sit minima quasi ut voluptatem Quis! Aut exercitationem accusantium et aperiam enim est dignissimos Quis.
                 Qui fuga dolor sed enim sunt aut neque sunt sit impedit nihil sed tempora doloribus. Sit galisum distinctio non explicabo odit sit minima
                 quasi ut voluptatem Quis!
@@ -33,8 +34,8 @@ function Apropos() {
                 </button>
             </div>
 
-            <div className='flex justify-center items-center w-1/2'>
-                <div className='grid grid-cols-2 grid-rows-1 gap-4'>
+            <div className='flex justify-center items-center w-1/2 max-sm:w-full'>
+                <div className='grid grid-cols-2 grid-rows-1 gap-4 max-sm:flex max-sm:flex-col'>
                     <BoxPropos icone='/icons/quality.png'
                                titre='Qualite'
                                contenue='Qui fuga dolor sed enim sunt aut neque sunt sit impedit nihil sed tempora doloribus. Sit galisum distinctio 
@@ -58,7 +59,30 @@ function Apropos() {
                 </div>
             </div>
 
+        </div>
 
+            <div className='bg-[#E2E9C0] w-full'>
+                <EmblaCarousel/>
+            </div>
+
+        {/*testimonial*/}
+        <div className='w-full flex flex-row my-10 px-20 max-sm:px-5 max-sm:flex-col max-sm:gap-y-5'>
+            <div className='w-2/3 flex flex-col justify-center items-start px-5 gap-y-2 text-[#1E0F1C] max-sm:w-full max-sm:items-center'>
+               <h1 className='text-4xl font-bold text-left max-sm:text-3xl'>Plus de questions ?</h1>
+               <p className='text-xs text-left mx-5 max-sm:mx-1 '>Qui fuga dolor sed enim sunt aut neque sunt sit impedit nihil sed tempora doloribus. Sit galisum distinctio 
+               non explicabo odit sit minima quasi ut voluptatem Qui fuga dolor sed enim sunt aut neque sunt sit impedit nihil sed tempora doloribus. Sit galisum distinctio 
+               non explicabo odit sit minima quasi ut voluptatem</p>
+            </div>
+
+            <div className='w-1/3 px-5 flex flex-col max-sm:w-full'>
+               <MiniQuestion/>
+            </div>
+
+        </div>
+
+        {/*Temoignages*/}
+        <div className='w-full flex flex-row my-10 px-20 max-sm:px-2'>
+            <EmblaCarouselTemoi />
         </div>
 
 

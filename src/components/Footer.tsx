@@ -2,11 +2,11 @@ import { Link } from "react-router-dom"
 
 const Footer = () => {
   return (
-    <section className="flex flex-row w-full bg-gray-400 max-sm:flex-col">
+    <section className="flex flex-row w-full bg-[#E2E9C0] max-sm:flex-col">
 
         {/*Partie gauche*/}
-        <div className="flex flex-col w-1/3 justify-cente text-white items-start p-5 gap-y-3 bg-gray-600 mx-5 max-sm:w-full max-sm:mx-0">
-           <img src="" sizes="" alt="logo"/>
+        <div className="flex flex-col w-1/3 justify-center text-white items-start p-5 gap-y-3 bg-[#1E0F1C] mx-5 max-sm:w-full max-sm:mx-0">
+           <img src={"/icons/logo.png"} alt="logo" className="h-10 w-10 max-sm:h-16 max-sm:w-16"/>
 
            <p className="text-xs text-wrap text-left w-[90%]">Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore 
             magna aliqua. Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi 

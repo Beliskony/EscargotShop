@@ -43,22 +43,22 @@ const ProdSwitch:FC<ProdSwitchProps> = ({categories=[
             <div className='flex justify-between items-center'>
                 {categories.map((categories) => (
                     <button key={categories.id} onClick={() => setActiveTab(categories.id)} className={`px-3 py-1 text-sm font-bold
-                    transition-colors ${activeTab===categories.id ? "text-gray-800" : "text-gray-500"}`}>
+                    transition-colors ${activeTab===categories.id ? "text-[#1E0F1C]" : "text-[#7AA95C]"}`}>
                        {categories.label}
                     </button>
                 ))}
             </div>
         
         {/*ligne et indicateur*/}
-           <div className='relative w-full h-px bg-black mt-2'>
-                <div className='absolute h-1 bg-gray-950 rounded-full transition-all duration-300 ease-in-out'
+           <div className='relative w-full h-px bg-[#7AA95C] mt-2'>
+                <div className='absolute h-1 bg-[#1E0F1C] rounded-full transition-all duration-300 ease-in-out'
                 style={{ width: `${100 / categories.length}%`, left: `${(activeIndex * 100) / categories.length}%` }}>
 
            </div>
         </div>
 
         {/*contenu*/}
-        <div className='w-[90%]  ml-10 mt-20 max-sm:ml-0 max-sm:w-full md:ml-0 md:w-full'>
+        <div className='w-[90%]  ml-10 mt-20 max-sm:ml-0 max-sm:w-full md:ml-0 md:w-full transition-all duration-300 ease-in-out'>
             {ContenuRendu()}</div>
         </div>
 
