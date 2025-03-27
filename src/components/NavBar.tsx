@@ -9,7 +9,7 @@ const NavBar = () => {
     <section className="bg-transparent w-full h-16 backdrop-blur-lg flex items-center">
         <nav className="px-10 sm:px-6 lg:px-8 w-full justify-between flex flex-row absolute">
             <div className="flex item-center text-3xl text-[#E2E9C0] font bold w-1/5 justify-center">
-                <img src="/icons/logo.png" className="h-16 w-16"/>
+               <Link to="/"><img src="/icons/logo.png" className="h-16 w-16"/></Link>
             </div>
 
             <div className="max-sm:hidden flex flex-row w-4/5 items-center justify-end">
