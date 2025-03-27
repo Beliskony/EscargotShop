@@ -25,8 +25,8 @@ const NavBar = () => {
                 <Link to="/Contacts" className="block py-2 px-4 text-[#E2E9C0] hover:text-2xl hover:text-[#E2E9C0] hover:font-bold">
                    Contacts</Link>
                     
-                <Link to="/Projets" className="block py-2 px-4 text-[#E2E9C0] hover:text-2xl hover:text-[#E2E9C0] hover:font-bold">
-                    Projets</Link>
+                <Link to="/Produits" className="block py-2 px-4 text-[#E2E9C0] hover:text-2xl hover:text-[#E2E9C0] hover:font-bold">
+                    Produits</Link>
 
             </div>
             
@@ -38,20 +38,20 @@ const NavBar = () => {
             {isOpen && (
                 <motion.div initial={{opacity: 0, y: -10}} animate={{opacity: 1, y: 0}} exit={{opacity: 0, y: -10}} className="md:hidden bg-white shadow-md fixed top-0 left-0
                 w-screen h-screen flex flex-col pt-28 z-40">
-                    <Link to="/" className="block py-2 px-4 text-[#E2E9C0] hover:text-2xl hover:text-[#1E0F1C] hover:font-bold">
+                    <Link to="/" className="block py-2 px-4 text-[#1E0F1C] hover:text-2xl hover:text-[#1E0F1C] hover:font-bold">
                         Acceuil</Link>
 
-                    <Link to="/Services" className="block py-2 px-4 text-[#E2E9C0] hover:text-2xl hover:text-[#1E0F1C] hover:font-bold">
+                    <Link to="/Services" className="block py-2 px-4 text-[#1E0F1C] hover:text-2xl hover:text-[#1E0F1C] hover:font-bold">
                         Servcice</Link>
 
-                    <Link to="/Apropos" className="block py-2 px-4 text-[#E2E9C0] hover:text-2xl hover:text-[#1E0F1C] hover:font-bold">
+                    <Link to="/Apropos" className="block py-2 px-4 text-[#1E0F1C] hover:text-2xl hover:text-[#1E0F1C] hover:font-bold">
                         A propos</Link>
 
-                    <Link to="/Contacts" className="block py-2 px-4 text-[#E2E9C0] hover:text-2xl hover:text-[#1E0F1C] hover:font-bold">
+                    <Link to="/Contacts" className="block py-2 px-4 text-[#1E0F1C] hover:text-2xl hover:text-[#1E0F1C] hover:font-bold">
                         Contacts</Link>
                     
-                    <Link to="/Projets" className="block py-2 px-4 text-[#E2E9C0] hover:text-2xl hover:text-[#1E0F1C] hover:font-bold">
-                        Projets</Link>
+                    <Link to="/Produits" className="block py-2 px-4 text-[#1E0F1C] hover:text-2xl hover:text-[#1E0F1C] hover:font-bold">
+                        Produits</Link>
                 </motion.div>
             )} </button>
         </nav>
