@@ -13,7 +13,7 @@ function Produits() {
         {/*Nos produits*/}
         <section className='w-full flex flex-col text-[#E2E9C0]'>
           {/*Volailles*/}
-          <div className='w-full flex flex-row justify-around items-center p-10 bg-[#1E0F1C] max-sm:flex-col max-sm:p-5 max-sm:gap-y-3'>
+          <div id='volailles' className='w-full flex flex-row justify-around items-center p-10 bg-[#1E0F1C] max-sm:flex-col max-sm:p-5 max-sm:gap-y-3'>
              <div className='w-1/2 flex flex-col gap-y-7 px-20 max-sm:w-full max-sm:px-3'>
 
                 <h1 className='text-5xl font-bold text-left'>Nos Volailles</h1>
@@ -89,7 +89,7 @@ function Produits() {
 
 
           {/*Escargots*/}
-          <div className='w-full flex flex-row-reverse justify-around items-center p-10 bg-[#7AA95C] max-sm:flex-col max-sm:p-5 max-sm:gap-y-3'>
+          <div id='escargots' className='w-full flex flex-row-reverse justify-around items-center p-10 bg-[#7AA95C] max-sm:flex-col max-sm:p-5 max-sm:gap-y-3'>
              <div className='w-1/2 flex flex-col gap-y-7 px-20 max-sm:w-full max-sm:px-3'>
 
                 <h1 className='text-5xl font-bold text-left'>Nos Mollusques</h1>

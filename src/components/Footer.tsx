@@ -117,11 +117,11 @@ const Footer = () => {
             <div className="flex flex-col justify-around items-center gap-y-2 w-1/3">
               <h2 className="text-2xl font-bold">Produits</h2>
 
-              <Link to="/">
+              <Link to="/Produits/#escargots">
                 <h5 className="font-light text-xs hover:underline hover:font-bold hover:transition-all hover:duration-100">Escargots</h5>
               </Link>
 
-              <Link to="/">
+              <Link to="/Produits/#volailles">
                 <h5 className="font-light text-xs hover:underline hover:font-bold hover:transition-all hover:duration-100">Vollailes</h5>
               </Link>
 
