@@ -37,7 +37,7 @@ const Formulaire = () => {
     <div className="flex flex-col h-full w-full items-center gap-y-4">
         <h1 className="text-4xl font-bold text-[#1E0F1C]">Get In Touch</h1>
 
-        <form onSubmit={handleSubmit} className="backdrop-blur-2xl bg-[#7AA95C] flex flex-col border h-full w-96 rounded-xl p-4 gap-y-4 text-[#1E0F1C]">
+        <form onSubmit={handleSubmit} className="backdrop-blur-2xl bg-[#7AA95C] flex flex-col border h-full w-full max-sm:p-1 rounded-xl p-4 gap-y-4 text-[#1E0F1C]">
             <div>
                 <input type="text" name="nom" value={formData.nom} onChange={handleChange} placeholder="Nom" required className="w-full h-10 bg-transparent border-b 
                 border-gray-300 placeholder:text-[#E2E9C0] focus:border-gray-500 outline-none" />

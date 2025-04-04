@@ -12,14 +12,14 @@ function Contacts() {
         </div>
 
        {/*corp section 1*/}
-        <section className='w-full h-[650px] flex flex-row justify-center items-center p-10 my-10 bg-[#E2E9C0]'>
-          <div className='w-3/5 h-full justify-center items-center flex flex-col p-4'>
+        <section className='w-full h-[650px] flex flex-row justify-center items-center p-10 my-10 bg-[#E2E9C0] max-sm:w-full max-sm:h-full max-sm:p-1 max-sm:flex-col'>
+          <div className='w-3/5 h-full justify-center items-center flex flex-col p-4 max-sm:w-full max-sm:p-1'>
             <div className='flex flex-col gap-y-2'>
-              <h1 className='text-4xl font-bold text-wrap'>Nous somme pret a vous ecoutez et vous satisfaire cher clients</h1>
+              <h1 className='text-4xl font-bold text-wrap max-sm:text-2xl'>Nous somme pret a vous ecoutez et vous satisfaire cher clients</h1>
               <p>Faites vous entendre, un formlaire est mis a votre disposition pour toute commande ou reclamation</p>
             </div>
 
-            <div className='grid grid-cols-2 grid-rows-2 w-[65%] gap-y-1.5 my-5'>
+            <div className='grid grid-cols-2 grid-rows-2 w-[65%] gap-y-1.5 my-5 max-sm:w-full max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center'>
 
               <div className='flex flex-col w-52 h-32 justify-center items-center p-3 rounded shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]'>
                 <h1 className='font-bold text-2xl'>Call Us</h1>
@@ -71,7 +71,7 @@ function Contacts() {
           
           </div>
 
-          <div className='w-2/5 h-full p-5'>
+          <div className='w-2/5 h-full p-5 max-sm:w-full max-sm:p-1'>
             <Formulaire/>
           
           </div>
@@ -79,7 +79,7 @@ function Contacts() {
         </section>
 
         {/*la map*/}
-        <section className='w-full h-80 my-5'>
+        <section className='w-full h-80 my-5 max-sm:h-52 '>
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63564.26572624499!2d-3.9781658804714035!3d5.299072554980033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1edd59f2ceba5%3A0x1d277795b2626983!2sKoumassi%2C%20Abidjan!5e0!3m2!1sfr!2sci!4v1743004165648!5m2!1sfr!2sci"
           style={{ width:"100%", height:"100%", border:0}}  loading="lazy">
           </iframe>
