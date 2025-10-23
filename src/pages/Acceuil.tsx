@@ -121,7 +121,7 @@ function Acceuil() {
           Nos Engagements
         </motion.h1>
 
-        <div className="w-full px-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-sm:px-0 max-sm:grid-cols-1">
+        <div className="w-full px-5 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 max-sm:px-0 max-sm:grid-cols-1">
           {servicesData.map((item, index) => (
             <Point 
               key={item.titre}
