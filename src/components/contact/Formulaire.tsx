@@ -236,16 +236,6 @@ const Formulaire = () => {
                 </div>
             </motion.form>
 
-            {/* Informations de contact alternatives */}
-            <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4 }}
-                className="text-center text-[#1E0F1C]/70 text-sm mt-6"
-            >
-                <p>Ou contactez-nous directement :</p>
-                <p className="font-semibold mt-2">📞 +225 07-07-07-07-07 | ✉️ contact@escargots-volailles.com</p>
-            </motion.div>
         </div>
     )
 }
