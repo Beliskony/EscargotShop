@@ -1,69 +1,75 @@
-import {FC, useState} from 'react'
+import { FC, useState } from 'react'
 import CategoriUn from './switchImages/CategoriUn'
 import CategoriDeux from './switchImages/CategoriDeux'
-import CategoriTrois from './switchImages/CategoriTrois'
-import CategoriQuatre from './switchImages/CategoriQuatre'
 
-interface ProdSwitchProps{
-    categories?: {id: number, label: string}[]
+interface Category {
+    id: number
+    label: string
 }
 
-const ProdSwitch:FC<ProdSwitchProps> = ({categories=[
-    {id:1, label:"Escargots"},
-    {id:2, label:"Volailles"},
-    {id:3, label:"Plats escargots"},
-    {id:4, label:"Plats Vollailes"} ]}) => {
-        
-        const [activeTab, setActiveTab] = useState(categories[0].id)
+interface ProdSwitchProps {
+    categories?: Category[]
+}
 
-        // Calculer l'index de l'onglet actif pour l'animation
-  const activeIndex = categories.findIndex((cat) => cat.id === activeTab)
+// Composant de contenu par catégorie pour une meilleure gestion
+const CategoryContent: FC<{ categoryId: number }> = ({ categoryId }) => {
+    const components = {
+        1: CategoriUn,
+        2: CategoriDeux,
 
-  
-  const ContenuRendu = () => {
-    switch (activeTab) {
-        case 1:
-            return <CategoriUn/>
-        case 2:
-            return <CategoriDeux/>
-        case 3:
-            return <CategoriTrois/>
-        case 4:
-            return <CategoriQuatre/>
-        default:
-            return <CategoriUn/>
     }
-  }
 
-   
-  return (
-    <div className='w-full p-5 flex justify-center items-center max-sm:p-1'>
-        {/*Navigation des categories*/}
-        <div className='my-6 w-[70%] max-sm:w-full'>
-            <div className='flex justify-between items-center'>
-                {categories.map((categories) => (
-                    <button key={categories.id} onClick={() => setActiveTab(categories.id)} className={`px-3 py-1 text-sm font-bold
-                    transition-colors ${activeTab===categories.id ? "text-[#1E0F1C]" : "text-[#7AA95C]"}`}>
-                       {categories.label}
-                    </button>
-                ))}
+    const Component = components[categoryId as keyof typeof components] || CategoriUn
+    return <Component />
+}
+
+const ProdSwitch: FC<ProdSwitchProps> = ({ 
+    categories = [
+        { id: 1, label: "Escargots" },
+        { id: 2, label: "Volailles" },
+    ] 
+}) => {
+    const [activeTab, setActiveTab] = useState<number>(categories[0].id)
+    const activeIndex = categories.findIndex((cat) => cat.id === activeTab)
+
+    return (
+        <div className='w-full p-5 flex justify-center items-center max-sm:p-1'>
+            <div className='my-6 w-full'>
+                {/* Navigation des catégories */}
+                <div className='flex justify-between items-center xl:w-1/2 mx-auto gap-x-10 max-sm:gap-x-4'>
+                    {categories.map((category) => (
+                        <button 
+                            key={category.id} 
+                            onClick={() => setActiveTab(category.id)} 
+                            className={`px-3 py-1 text-sm font-bold transition-colors duration-300 ${
+                                activeTab === category.id 
+                                    ? "text-[#1E0F1C]" 
+                                    : "text-[#7AA95C] hover:text-[#1E0F1C]/70"
+                            }`}
+                        >
+                            {category.label}
+                        </button>
+                    ))}
+                </div>
+                
+                {/* Ligne et indicateur */}
+                <div className='relative w-full h-px bg-[#7AA95C] mt-2 xl:justify-center xl:w-1/2 mx-auto'>
+                    <div 
+                        className='absolute h-1 bg-[#1E0F1C] rounded-full transition-all duration-300 ease-in-out'
+                        style={{ 
+                            width: `${100 / categories.length}%`, 
+                            left: `${(activeIndex * 100) / categories.length}%` 
+                        }}
+                    />
+                </div>
+
+                {/* Contenu */}
+                <div className='w-full mt-20 transition-all duration-300 ease-in-out'>
+                    <CategoryContent categoryId={activeTab} />
+                </div>
             </div>
-        
-        {/*ligne et indicateur*/}
-           <div className='relative w-full h-px bg-[#7AA95C] mt-2'>
-                <div className='absolute h-1 bg-[#1E0F1C] rounded-full transition-all duration-300 ease-in-out'
-                style={{ width: `${100 / categories.length}%`, left: `${(activeIndex * 100) / categories.length}%` }}>
-
-           </div>
         </div>
-
-        {/*contenu*/}
-        <div className='w-[90%]  ml-10 mt-20 max-sm:ml-0 max-sm:w-full md:ml-0 md:w-full transition-all duration-300 ease-in-out'>
-            {ContenuRendu()}</div>
-        </div>
-
-    </div>
-  )
+    )
 }
 
 export default ProdSwitch

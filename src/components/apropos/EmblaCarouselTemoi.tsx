@@ -13,7 +13,7 @@ const EmblaCarouselTemoi= () => {
   return (
     <section className="embla w-full overflow-hidden">
       <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container flex gap-x-3">
+        <div className="embla__container flex gap-x-3 px-2">
           
             <div className="embla__slide">
                <Temoignages nom='John Doe'
